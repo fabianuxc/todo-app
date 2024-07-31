@@ -6,11 +6,11 @@ const mockTodos = [
   {
     id: '1',
     title: 'todo 1',
-    completed: false,
+    completed: true,
 
   },
   {
-    id: '1',
+    id: '2',
     title: 'todo 2',
     completed: false,
   }
@@ -19,9 +19,9 @@ function App(): JSX.Element {
   const [todos, setTodos] = useState(mockTodos)
 
   return (
-    <>
+    <div className='todoapp'>
       <Todos todos={todos} />
-    </>
+    </div>
   )
 }
 
