@@ -3,7 +3,7 @@ import { Todo } from "./Todo"
 
 interface Props {
     todos: ListOfTodos
-    onRemoveTodo: ({id}: TodoId) => void
+    onRemoveTodo: ({ id }: TodoId) => void
     onToggleCompleteTodo: ({ id, completed }: Pick<TodoType, 'id' | 'completed'>) => void
 }
 

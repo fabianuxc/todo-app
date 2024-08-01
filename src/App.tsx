@@ -60,27 +60,27 @@ function App(): JSX.Element {
   const filteredTodos = todos.filter(todo => {
     if (filterSelected === TODO_FILTERS.ACTIVE) return !todo.completed
     if (filterSelected === TODO_FILTERS.COMPLETED) return todo.completed
-    
+
     console.log(todo)
     return todo
 
-    
+
   })
 
-  const handleAddTodo = ({title}: TodoTitle): void => {
-    const newTodo ={
+  const handleAddTodo = ({ title }: TodoTitle): void => {
+    const newTodo = {
       title,
       id: crypto.randomUUID(),
       completed: false
     }
 
-    const newTodos = [ ...todos, newTodo]
+    const newTodos = [...todos, newTodo]
     setTodos(newTodos)
   }
 
   return (
     <div className='todoapp'>
-      <Header onAddTodo={handleAddTodo}/>
+      <Header onAddTodo={handleAddTodo} />
       <Todos
         todos={filteredTodos}
         onRemoveTodo={handleRemove}

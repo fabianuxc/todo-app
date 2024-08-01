@@ -10,8 +10,8 @@ export const Filters: React.FC<Props> = ({ filterSelected, handleFilterChange })
     const handleClick = (filter: FilterValue) => (event: React.MouseEvent<HTMLAnchorElement>) => {
         event.preventDefault()
         handleFilterChange(filter)
-      }
-    
+    }
+
     return (
         <ul className="filters">
             {
@@ -27,7 +27,7 @@ export const Filters: React.FC<Props> = ({ filterSelected, handleFilterChange })
                         </li>)
                 })
             }
-          
+
         </ul>
     )
 }
